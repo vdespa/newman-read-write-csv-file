@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "7c8b7afe-0d40-430b-b1c6-d50b0253cfae",
+		"name": "RW CSV Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "R1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8afb3681-7d82-47a8-aa78-83f949771a4d",
+						"exec": [
+							"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200));",
+							"",
+							"pm.test(\"Check name and company\",  () => {",
+							"    const response = pm.response.json();",
+							"    pm.expect(response.form.name).to.eql(\"John\");",
+							"    pm.expect(response.form.company).to.eql(\"ACME\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "company",
+							"value": "{{company}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "httpbin.org/post",
+					"host": [
+						"httpbin",
+						"org"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
