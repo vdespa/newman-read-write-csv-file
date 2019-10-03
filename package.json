@@ -1,0 +1,25 @@
+{
+  "name": "newman-csv-rw",
+  "version": "1.0.0",
+  "description": "Example script for reading iteration data from a CSV file and writing back the test results",
+  "main": "script.js",
+  "dependencies": {
+    "papaparse": "^5.1.0"
+  },
+  "devDependencies": {
+    "newman": "^4.5.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdespa/newman-read-write-csv-file.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vdespa/newman-read-write-csv-file/issues"
+  },
+  "homepage": "https://github.com/vdespa/newman-read-write-csv-file#readme"
+}
