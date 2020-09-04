@@ -4,7 +4,7 @@
   "description": "Example script for reading iteration data from a CSV file and writing back the test results",
   "main": "script.js",
   "dependencies": {
-    "papaparse": "^5.1.0"
+    "papaparse": "^5.2.0"
   },
   "devDependencies": {
     "newman": "^4.5.5"
